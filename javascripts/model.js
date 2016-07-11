@@ -9,9 +9,6 @@ function Stealth() {
 }
 
 Stealth.prototype = new Type.Drone();
-// let StealthTest = new Stealth();
-// console.log("StealthTest", StealthTest);
-
 
 function Taco() {
   this.health += Math.floor(Math.random() * (80 - 60) + 60);
@@ -20,9 +17,6 @@ function Taco() {
 }
 
 Taco.prototype = new Type.Drone();
-// let TacoTest = new Taco();
-// console.log("TacoTest", TacoTest);
-
 
 function Stomper() {
   this.health += Math.floor(Math.random() * (80 - 60) + 60);
@@ -31,9 +25,6 @@ function Stomper() {
 }
 
 Stomper.prototype = new Type.Bipedal();
-// let StomperTest = new Stomper();
-// console.log("StomperTest", StomperTest);
-
 
 function Looper() {
   this.health += Math.floor(Math.random() * (80 - 60) + 60);
@@ -42,9 +33,6 @@ function Looper() {
 }
 
 Looper.prototype = new Type.Bipedal();
-// let LooperTest = new Looper();
-// console.log("LooperTest", LooperTest);
-
 
 function Redneck() {
   this.health += Math.floor(Math.random() * (80 - 60) + 60);
@@ -53,9 +41,6 @@ function Redneck() {
 }
 
 Redneck.prototype = new Type.ATV();
-// let RedneckTest = new Redneck();
-// console.log("RedneckTest", RedneckTest);
-
 
 function Scooter() {
   this.health += Math.floor(Math.random() * (80 - 60) + 60);
@@ -64,8 +49,6 @@ function Scooter() {
 }
 
 Scooter.prototype = new Type.ATV();
-let ScooterTest = new Scooter();
-console.log("ScooterTest", ScooterTest);
 
 module.exports = {
   Stealth,

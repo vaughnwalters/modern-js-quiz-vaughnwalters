@@ -7,6 +7,5 @@ function Robot() {
   this.type = null;
   this.model = null;
 }
-console.log("Robot", Robot);
 
 module.exports = {Robot};

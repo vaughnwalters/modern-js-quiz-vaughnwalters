@@ -20,6 +20,4 @@ function ATV() {
 
 ATV.prototype = new Robot.Robot();
 
-console.log("ATV", ATV);
-
 module.exports = {Drone, Bipedal, ATV};

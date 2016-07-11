@@ -1,88 +1,53 @@
 "use strict";
 
-// let Robot = require("./robot"); 
-// let Type = require("./type");
 let Model = require("./model");
 let $ = require("jquery");
 
-$(document).ready(function(){
+// document ready
+$(() => {
 
 let newRobotOne = null;
 let newRobotTwo = null;
 
-// function buildExtraWeapon () {
-//   $('.extraWeaponBtn').click(function () {
-//     var inputName = $('#name').val();
-//     NewHero = new EquipmentModule.ExtraWeapon();
-//     NewHero.name = inputName;
-//     resetHealth = NewHero.health;
-//     addFightButton();
-//     buildEnemy ();
-//     Templates.heroTemplate(NewHero);
-//     Templates.enemyTemplate(NewEnemy);
-//     console.log(NewHero.race);
-//   })
-//  }
-//  buildExtraWeapon();
-
-$("#selectRobotOne").change(function() {
+// build robot one
+$("#selectRobotOne").change(() => {
   let R1Select = $("#selectRobotOne").val();
-  console.log(R1Select);
   let p1Name = $("#playerOneName").val();
-  console.log("Robot1");
-  console.log("p1Name", p1Name);
   if (R1Select === "stealthDrone") {
-    console.log("AW YEAH STEALTHDRONE");
-    let p1Stealth = new Model.Stealth();
-    p1Stealth.name = p1Name;
-    console.log(p1Stealth);
-
+    newRobotOne = new Model.Stealth();
   } else if (R1Select === "tacoDrone") {
-    console.log("AW YEAH TACODRONE");
-    
+    newRobotOne = new Model.Taco();
   } else if (R1Select === "stomperBipedal") {
-    console.log("AW YEAH STOMPER BIPEDAL");
+    newRobotOne = new Model.Stomper();
   } else if (R1Select === "looperBipedal") {
-    console.log("AW YEAH Looper BIPEDAL");
+    newRobotOne = new Model.Looper();
   } else if (R1Select === "redneckATV") {
-    console.log("AW YEAH REDNECK ATV");
+    newRobotOne = new Model.Redneck();
   } else if (R1Select === "scooterATV") {
-    console.log("AW YEAH SCOOTER ATV");
+    newRobotOne = new Model.Scooter();
   }
+  newRobotOne.name = p1Name;
+  console.log(newRobotOne);
 });
 
-$("#selectRobotTwo").change(function() {
+// build robot two
+$("#selectRobotTwo").change(() => {
+  let R2Select = $("#selectRobotTwo").val();
   let p2Name = $("#playerTwoName").val();
-  console.log("Robot2");
-  console.log("p2Name", p2Name);
-  buildStealthDrone();
+  if (R2Select === "stealthDrone") {
+    newRobotTwo = new Model.Stealth();
+  } else if (R2Select === "tacoDrone") {
+    newRobotTwo = new Model.Taco();
+  } else if (R2Select === "stomperBipedal") {
+    newRobotTwo = new Model.Stomper();
+  } else if (R2Select === "looperBipedal") {
+    newRobotTwo = new Model.Looper();
+  } else if (R2Select === "redneckATV") {
+    newRobotTwo = new Model.Redneck();
+  } else if (R2Select === "scooterATV") {
+    newRobotTwo = new Model.Scooter();
+  }
+  newRobotTwo.name = p2Name;
+  console.log(newRobotTwo);
 });
-
-function buildStealthDrone () {
- let NewRobot = new Model.Stealth();
- console.log(NewRobot)
-}
-
-function buildTacoDrone () {
-  
-}
-
-function buildStomperBipedal () {
-  
-}
-
-function buildLooperBipedal () {
-  
-}
-
-function buildRedneckATV () {
-  
-}
-
-function buildStealthATV () {
-
-}
-
-
-
-}); 
+});
