@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <h1>ROBOT RUMBLE</h1>
+  <h4>enter name and select robot type</h4>
+  <h4>then click "attack" to FIGHT!</h4>
+
+  <div id="playerOne" class="playerOne">
+    <p>Player One:</p>
+    <input type="text" name="playerOne" class="input" id="playerOneName" autofocus>
+    <div>
+      <select name="select">
+        <option value="stealthDrone" id="stealthDrone">Stealth Drone</option> 
+        <option value="tacoDrone" id="tacoDrone">Taco Drone</option>
+        <option value="stomperBipedal" id="stomperBipedal">Stomper Bipedal</option> 
+        <option value="looperBipedal" id="looperBipedal">Looper Bipedal</option> 
+        <option value="redneckATV" id="redneckATV">Redneck ATV</option>
+        <option value="scooterATV" id="scooterATV">Scooter ATV</option> 
+      </select>
+     </div> 
+  </div>
+  
+  <div id="playerTwo" class="playerTwo">
+    <p>Player Two:</p>
+    <input type="text" name="playerTwo" class="input" id="playerTwoName">
+    <div>
+      <select name="select">
+        <option value="stealthDrone" id="stealthDrone">Stealth Drone</option> 
+        <option value="tacoDrone" id="tacoDrone">Taco Drone</option>
+        <option value="stomperBipedal" id="stomperBipedal">Stomper Bipedal</option> 
+        <option value="looperBipedal" id="looperBipedal">Looper Bipedal</option> 
+        <option value="redneckATV" id="redneckATV">Redneck ATV</option>
+        <option value="scooterATV" id="scooterATV">Scooter ATV</option> 
+      </select>
+    </div>  
+  </div>
+
+  <button id="attackBtn">ATTACK!</button>
+
+  <div id="outputDiv"></div>
+
+  <script src = "dist/bundle.js"></script>
+</body>
+</html>
