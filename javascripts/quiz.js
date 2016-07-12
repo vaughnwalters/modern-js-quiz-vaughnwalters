@@ -2,7 +2,6 @@
 
 const Model = require("./model");
 const Weapon = require("./weapon");
-const $ = require("jquery");
 
 // document ready
 $(() => {
@@ -44,7 +43,6 @@ $(() => {
   });
 
   // build robot two
-  // why isn't looper bipedal working to be selected?
   $("#selectRobotTwo").change(() => {
     const R2Select = $("#selectRobotTwo").val();
     const p2Name = $("#playerTwoName").val();

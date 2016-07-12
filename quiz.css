@@ -1,0 +1,30 @@
+.selectForm {
+  width: 100%
+}
+
+#playerOne {
+  width: 40%;
+  position: absolute;
+  left: 5%;
+  padding: 2%;
+
+}
+
+#playerTwo {
+  width: 40%;
+  position: absolute;
+  right: 5%;
+  padding: 2%;
+}
+
+input {
+  width: 100%;
+}
+
+.attackOutput {
+  position: absolute;
+  top: 50%;
+  margin: 0 auto;
+  display: block;
+
+}
