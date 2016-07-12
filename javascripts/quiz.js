@@ -77,7 +77,11 @@ $(() => {
 
 // fight button event 
   $("#attackBtn").click(() => {
+    if ($("#playerOneName").val() === "" || $("#playerTwoName").val() === "" || newRobotOne === null || newRobotTwo === null) {
+      alert("Enter a name and select a robot");
+    } else {
     fight();
+    }
   });
 
 // fight function

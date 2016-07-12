@@ -1,26 +1,7 @@
-/*.selectForm {
-  width: 100%
-}
-
-#playerOne {
-  width: 40%;
-  position: fixed;
-  left: 5%;
-  padding: 2%;
-
-}
-
-#playerTwo {
-  width: 40%;
-  position: fixed;
-  right: 5%;
-  padding: 2%;
-}
-*/
 input {
   width: 100%;
 }
-/*
-.attackOutput {
-  margin-top: 25%;
-}*/
+
+.buttonDiv {
+  padding: 4%;
+}
