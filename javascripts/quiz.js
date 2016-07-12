@@ -27,7 +27,11 @@ $(() => {
       newRobotOne = new Model.Scooter();
     }
     newRobotOne.name = p1Name;
-    $("#r1Div").html(`${newRobotOne.name}\'s heath is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
+    if (p1Name === "") {
+      alert ("Please enter a name for Player One");
+    } else {
+      $("#r1Div").html(`${newRobotOne.name}\'s heath is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
+    }
   });
 
 
@@ -50,7 +54,11 @@ $(() => {
       newRobotTwo = new Model.Scooter();
     }
     newRobotTwo.name = p2Name;
+    if (p2Name === "") {
+      alert("Please enter a name for player two.")
+    } else {
     $("#r2Div").html(`${newRobotTwo.name}\'s heath is ${newRobotTwo.health} and attack is ${newRobotTwo.attack}`);
+    };
   });
 
   $("#attackBtn").click(() => {
