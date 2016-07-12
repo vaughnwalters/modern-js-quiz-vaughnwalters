@@ -6,6 +6,7 @@ function Robot() {
   this.attack = null;
   this.type = null;
   this.model = null;
+  this.weapon = null;
 }
 
 module.exports = {Robot};

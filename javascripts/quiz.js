@@ -27,8 +27,9 @@ $(() => {
       newRobotOne = new Model.Scooter();
     }
     newRobotOne.name = p1Name;
-    console.log(newRobotOne);
+    $("#r1Div").html(`${newRobotOne.name}\'s heath is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
   });
+
 
   // build robot two
   // why isn't looper bipedal working to be selected?
@@ -49,7 +50,7 @@ $(() => {
       newRobotTwo = new Model.Scooter();
     }
     newRobotTwo.name = p2Name;
-    console.log(newRobotTwo);
+    $("#r2Div").html(`${newRobotTwo.name}\'s heath is ${newRobotTwo.health} and attack is ${newRobotTwo.attack}`);
   });
 
   $("#attackBtn").click(() => {
@@ -59,16 +60,25 @@ $(() => {
 
   function fight() {
     newRobotOne.health = newRobotOne.health - newRobotTwo.attack;
-    console.log("new robot one health", newRobotOne.health);
+      $("#r1Div").html(`${newRobotOne.name}\'s heath is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
     if (newRobotOne.health < 1) {
       console.log("Robot one is dead");
+      robotOneDead();
     } else { 
       newRobotTwo.health = newRobotTwo.health - newRobotOne.attack;
-      console.log("new robot two health", newRobotTwo.health);
+        $("#r2Div").html(`${newRobotTwo.name}\'s heath is ${newRobotTwo.health} and attack is ${newRobotTwo.attack}`);
       if (newRobotTwo.health < 1) {
         console.log("Robot two is dead");
       }
     }
+  }
+
+  function robotOneDead () {
+    $("#outputDiv").html(`${newRobotTwo.name} the ${newRobotTwo.type} ${newRobotTwo.model} defeated ${newRobotOne.name} the ${newRobotOne.type} ${newRobotOne.model} with its ${newRobotTwo.weapon}`);
+  }
+
+  function robotTwoDead () {
+    $("#outputDiv").html(`${robotOneDead.name} the ${robotOneDead.type} ${robotOneDead.model} defeated ${newRobotTwo.name} the ${newRobotTwo.type} ${newRobotTwo.model} with its ${robotOneDead.weapon}`);
   }
 
 
