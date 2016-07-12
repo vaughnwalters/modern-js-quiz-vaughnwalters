@@ -1,6 +1,6 @@
 "use strict";
 
-let Type = require("./type");
+const Type = require("./type");
 
 function Stealth() {
   this.health += Math.floor(Math.random() * (85 - 65) + 65);

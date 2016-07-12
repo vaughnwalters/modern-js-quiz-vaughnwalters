@@ -36,7 +36,6 @@ $(() => {
     }
     newRobotOne.weapon = newR1Weapon.weapon;
     newRobotOne.name = p1Name;
-    console.log("newRobotOne.weapon", newR1Weapon.weapon);
     if (p1Name === "") {
       alert ("Please enter a name for Player One");
     } else {
@@ -67,12 +66,10 @@ $(() => {
       newR2Weapon = new Weapon.RedneckWeapon();
     } else if (R2Select === "scooterATV") {
       newRobotTwo = new Model.Scooter();
-      newR1Weapon = new Weapon.ScooterWeapon();
+      newR2Weapon = new Weapon.ScooterWeapon();
     }
     newRobotTwo.weapon = newR2Weapon.weapon;
     newRobotTwo.name = p2Name;
-    console.log("newRobotTwo.weapon", newR2Weapon.weapon);
-
     if (p2Name === "") {
       alert("Please enter a name for player two.");
     } else {
