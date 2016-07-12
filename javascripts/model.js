@@ -6,7 +6,6 @@ function Stealth() {
   this.health += Math.floor(Math.random() * (85 - 65) + 65);
   this.attack += Math.floor(Math.random() * (15 - 5) + 5);
   this.model = "Stealth";
-  this.weapon = "power nukes";
 }
 
 Stealth.prototype = new Type.Drone();
@@ -15,7 +14,6 @@ function Taco() {
   this.health += Math.floor(Math.random() * (100 - 40) + 40);
   this.attack += Math.floor(Math.random() * (20 - 10) + 10);
   this.model = "Taco";
-  this.weapon = "rancid salsa";
 }
 
 Taco.prototype = new Type.Drone();
@@ -24,7 +22,6 @@ function Stomper() {
   this.health += Math.floor(Math.random() * (90 - 50) + 50);
   this.attack += Math.floor(Math.random() * (20 - 10) + 10);
   this.model = "Stomper";
-  this.weapon = "slick shoes";
 }
 
 Stomper.prototype = new Type.Bipedal();
@@ -33,7 +30,6 @@ function Looper() {
   this.health += Math.floor(Math.random() * (85 - 60) + 60);
   this.attack += Math.floor(Math.random() * (25 - 15) + 15);
   this.model = "Looper";
-  this.weapon = "super loops";
 }
 
 Looper.prototype = new Type.Bipedal();
@@ -42,7 +38,6 @@ function Redneck() {
   this.health += Math.floor(Math.random() * (70 - 30) + 30);
   this.attack += Math.floor(Math.random() * (30 - 5) + 5);
   this.model = "Redneck";
-  this.weapon = "skoal can";
 }
 
 Redneck.prototype = new Type.ATV();
@@ -51,7 +46,6 @@ function Scooter() {
   this.health += Math.floor(Math.random() * (80 - 60) + 60);
   this.attack += Math.floor(Math.random() * (15 - 10) + 10);
   this.model = "Scooter";
-  this.weapon = "phat moves";
 }
 
 Scooter.prototype = new Type.ATV();

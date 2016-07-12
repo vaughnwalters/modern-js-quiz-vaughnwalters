@@ -1,5 +1,5 @@
 {
-  "predef": [ "document", "console", "angular", "jQuery", "require" ],
+  "predef": [ "document", "console", "angular", "jQuery", "require", "alert" ],
   "esversion": 6,
   "globalstrict": true,
   "curly": true,
