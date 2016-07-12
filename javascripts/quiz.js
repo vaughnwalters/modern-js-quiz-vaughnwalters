@@ -1,7 +1,7 @@
 "use strict";
 
-let Model = require("./model");
-let $ = require("jquery");
+const Model = require("./model");
+const $ = require("jquery");
 
 // document ready
 $(() => {
@@ -11,8 +11,8 @@ $(() => {
 
   // build robot one
   $("#selectRobotOne").change(() => {
-    let R1Select = $("#selectRobotOne").val();
-    let p1Name = $("#playerOneName").val();
+    const R1Select = $("#selectRobotOne").val();
+    const p1Name = $("#playerOneName").val();
     if (R1Select === "stealthDrone") {
       newRobotOne = new Model.Stealth();
     } else if (R1Select === "tacoDrone") {
@@ -34,8 +34,8 @@ $(() => {
   // build robot two
   // why isn't looper bipedal working to be selected?
   $("#selectRobotTwo").change(() => {
-    let R2Select = $("#selectRobotTwo").val();
-    let p2Name = $("#playerTwoName").val();
+    const R2Select = $("#selectRobotTwo").val();
+    const p2Name = $("#playerTwoName").val();
     if (R2Select === "stealthDrone") {
       newRobotTwo = new Model.Stealth();
     } else if (R2Select === "tacoDrone") {
@@ -55,31 +55,23 @@ $(() => {
 
   $("#attackBtn").click(() => {
     fight();
-    console.log("fight button clicked");
   });
 
   function fight() {
     newRobotOne.health = newRobotOne.health - newRobotTwo.attack;
       $("#r1Div").html(`${newRobotOne.name}\'s heath is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
     if (newRobotOne.health < 1) {
-      console.log("Robot one is dead");
-      robotOneDead();
+      robotDead(newRobotTwo, newRobotOne);
     } else { 
       newRobotTwo.health = newRobotTwo.health - newRobotOne.attack;
         $("#r2Div").html(`${newRobotTwo.name}\'s heath is ${newRobotTwo.health} and attack is ${newRobotTwo.attack}`);
       if (newRobotTwo.health < 1) {
-        console.log("Robot two is dead");
+        robotDead(newRobotOne, newRobotTwo);
       }
     }
   }
 
-  function robotOneDead () {
-    $("#outputDiv").html(`${newRobotTwo.name} the ${newRobotTwo.type} ${newRobotTwo.model} defeated ${newRobotOne.name} the ${newRobotOne.type} ${newRobotOne.model} with its ${newRobotTwo.weapon}`);
+  function robotDead (alive, dead) {
+    $("#outputDiv").html(`${alive.name} the ${alive.model} ${alive.type} defeated ${dead.name} the ${dead.model} ${dead.type} with its ${alive.weapon}!`);
   }
-
-  function robotTwoDead () {
-    $("#outputDiv").html(`${robotOneDead.name} the ${robotOneDead.type} ${robotOneDead.model} defeated ${newRobotTwo.name} the ${newRobotTwo.type} ${newRobotTwo.model} with its ${robotOneDead.weapon}`);
-  }
-
-
 });

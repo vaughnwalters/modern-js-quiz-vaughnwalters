@@ -1,6 +1,6 @@
 "use strict";
 
-let Robot = require("./robot"); 
+const Robot = require("./robot"); 
 
 function Drone() {
   this.type = "Drone";
