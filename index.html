@@ -26,7 +26,7 @@
           <p>Player One:</p>
           <input type="text" name="playerOne" class="input" id="playerOneName" autofocus>
           <div>
-            <select name="select" id="selectRobotOne" class="form-control selectForm">
+            <select name="select" id="selectRobotOne" class="form-control selectForm" disabled="true">
               <option value="chooseOne">Choose a Robot</option>
               <option value="stealthDrone" id="stealthDrone">Stealth Drone</option> 
               <option value="tacoDrone" id="tacoDrone">Taco Drone</option>
@@ -47,7 +47,7 @@
           <p>Player Two:</p>
           <input type="text" name="playerTwo" class="input" id="playerTwoName">
           <div>
-            <select name="select" id="selectRobotTwo" class="form-control selectForm">
+            <select name="select" id="selectRobotTwo" class="form-control selectForm" disabled="true">
               <option value="chooseOne">Choose a Robot</option>
               <option value="stealthDrone" id="stealthDroneP2">Stealth Drone</option> 
               <option value="tacoDrone" id="tacoDroneP2">Taco Drone</option>
@@ -65,7 +65,7 @@
     <div class="row buttonDiv">
       <div class="col-xl-12">
         <div class="attackOutput text-center">
-          <button id="attackBtn" class="btn btn-lg btn-primary btn-danger">ATTACK!</button>
+          <button id="attackBtn" class="btn btn-lg btn-primary btn-danger" disabled="disabled">ATTACK!</button>
           <div id="outputDiv"></div>
         </div>
       </div>  

@@ -103,4 +103,31 @@ $(() => {
   function robotDead (alive, dead) {
     $("#outputDiv").html(`${alive.name} the ${alive.model} ${alive.type} defeated ${dead.name} the ${dead.model} ${dead.type} with its ${alive.weapon}!`);
   }
+
+// enable selectors when name is typed in input
+  $("#playerOneName").keyup(() => {
+    if ($("#playerOneName").val() !== "") {
+    $("#selectRobotOne").prop("disabled", false);
+    } else if ($("#playerOneName").val() === "") {
+    $("#selectRobotOne").prop("disabled", true);
+    }
+  });
+
+
+  $("#playerTwoName").keyup(() => {
+    if ($("#playerTwoName").val() !== "") {
+    $("#selectRobotTwo").prop("disabled", false);
+    } else if ($("#playerTwoName").val() === "") {
+    $("#selectRobotTwo").prop("disabled", true);
+    }
+  });
+
+// enable fight button when robot selections are made
+  $("body").keyup(() => {
+    if($("#selectRobotTwo").val() !== "chooseOne" && 
+    $("#selectRobotOne").val() !== "chooseOne") {
+      $("#attackBtn").prop("disabled", false);
+    }
+  });
+
 });
