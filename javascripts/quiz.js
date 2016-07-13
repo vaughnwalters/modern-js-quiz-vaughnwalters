@@ -123,7 +123,7 @@ $(() => {
   });
 
 // enable fight button when robot selections are made
-  $("body").keyup(() => {
+  $("body").mouseover(() => {
     if($("#selectRobotTwo").val() !== "chooseOne" && 
     $("#selectRobotOne").val() !== "chooseOne") {
       $("#attackBtn").prop("disabled", false);
