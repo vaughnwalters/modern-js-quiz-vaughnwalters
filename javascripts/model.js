@@ -58,11 +58,3 @@ module.exports = {
   Redneck,
   Scooter
 };
-
-// let Stealth2 = new Stealth();
-
-// can't log a function!
-// must assign function to a variable and then log variable
-
-// console.log("Stealth", Stealth);
-// console.log("Stealth", Stealth2); 
