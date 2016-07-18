@@ -1,21 +1,3 @@
-# Modern JavaScript Developer Quiz
-# Robot Battledome
-
-## Setup
-
-1. `cd` to your quizzes directory.
-1. Clone this repository and `cd` into the directory it creates.
-1. Now run the following commands.
-
-    ```bash
-    git checkout -b quiz
-    touch index.html
-    touch quiz.js
-    touch quiz.css
-    ```
-
-You are now ready to work in the `quiz` branch.
-
 When your work in complete, push up the branch (`git push origin quiz`) and submit the pull request on Github.
 
 ## Instructions
@@ -45,51 +27,4 @@ You'll be building robots to battle each other.
 1. Once either robot's health is <0 display a message that the battle is over, and which one won. For example...
 
 ##### The Viper Drone defeated the Behemoth ATV with its flamethrower.
-
----
-
-## Bonus Goals
-
-### Bonus Logical Requirements
-
-These are **completely** optional, once you have the basic requirements met and want to practice object composition.
-
-1. Define at least six different modifications and six different weapons that can be added to a robot.
-1. Each modification should provide some combination of the following benefits - increased protection, increased damage, or evasion capability (ability to avoid some attacks).
-1. Define the range of damage that each weapon can do. 
-
-
-### Bonus Functional Requirements
-
-If you have completed the base requirements, and want to explore object composition more, you may choose to implement these requirements. They are **completely** optional.
-
-1. When your user interface first loads, provide the user with buttons so that one specific robot model can be chosen as Player 1.
-1. Once the user selects a robot model for Player 1, show a button for each weapon that can be added to the robot.
-1. Once the user selects a weapon for Player 1, show a button for each modification that can be added to the robot.
-1. Once Player 1 has a modification, provide the user with buttons so that one specific robot model can be chosen as Player 2.
-1. Once the user selects a robot model for Player 2, show a button for each weapon that can be added to the robot.
-1. Once the user selects a weapon for Player 2, show a button for each modification that can be added to the robot.
-1. Once the modification for Player 2 is chosen, the battle begins.
-1. Each round of battle should determine the amount of damage each robot will do with its weapon.
-1. That damage should then be adjusted based on the modifications that it has, and what its opponent has.
-1. Rounds continue until one of the robots has 0, or less than 0, health.
-1. When the battle is over display the outcome to the user. For example...
-
-##### The Viper Drone defeated the Behemoth ATV with its flamethrower.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
