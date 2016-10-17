@@ -38,7 +38,7 @@ $(() => {
     if (p1Name === "") {
       alert ("Please enter a name for Player One");
     } else {
-      $("#r1Div").html(`${newRobotOne.name}\'s heath is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
+      $("#r1Div").html(`${newRobotOne.name}\'s health is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
     }
   });
 
@@ -71,9 +71,10 @@ $(() => {
     if (p2Name === "") {
       alert("Please enter a name for player two.");
     } else {
-    $("#r2Div").html(`${newRobotTwo.name}\'s heath is ${newRobotTwo.health} and attack is ${newRobotTwo.attack}`);
+    $("#r2Div").html(`${newRobotTwo.name}\'s health is ${newRobotTwo.health} and attack is ${newRobotTwo.attack}`);
     }
   });
+
 
 // fight button event 
   $("#attackBtn").click(() => {
@@ -87,12 +88,12 @@ $(() => {
 // fight function
   function fight() {
     newRobotOne.health = newRobotOne.health - newRobotTwo.attack;
-      $("#r1Div").html(`${newRobotOne.name}\'s heath is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
+      $("#r1Div").html(`${newRobotOne.name}\'s health is ${newRobotOne.health} and attack is ${newRobotOne.attack}`);
     if (newRobotOne.health < 1) {
       robotDead(newRobotTwo, newRobotOne);
     } else { 
       newRobotTwo.health = newRobotTwo.health - newRobotOne.attack;
-        $("#r2Div").html(`${newRobotTwo.name}\'s heath is ${newRobotTwo.health} and attack is ${newRobotTwo.attack}`);
+        $("#r2Div").html(`${newRobotTwo.name}\'s health is ${newRobotTwo.health} and attack is ${newRobotTwo.attack}`);
       if (newRobotTwo.health < 1) {
         robotDead(newRobotOne, newRobotTwo);
       }
